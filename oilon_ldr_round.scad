@@ -72,16 +72,16 @@ union() {
 //	translate([0,-9,0])
 
 	rotate([90,0,270])
-	translate([-8,25,-9]) {
+	translate([-8,40,-9]) {
 
 		difference() {	
-			roundedRect([16,50,9],8);
+			roundedRect([16,80,9],8);
 
 //			cube(size = [16, 9, 50]);
 			translate([0,2,0])
-				roundedRect([12,50,7],5);
+				roundedRect([14,80,7],5);
 //				cube(size = [14, 7, 50]);
-			translate([0,-17,5])
+			translate([0,-31,5])
 				rotate([0,0,0])
 #					cylinder(h = 5, r=3.5, $fn = 100);
 		}
@@ -106,6 +106,3 @@ module prism(l, w, h) {
 	], paths=[[0,1,2,0]]);
 }
 
-//rotate([90,0,270])
-//	translate([-8,25,-9])
-//	roundedRect([16,50,9],5);
