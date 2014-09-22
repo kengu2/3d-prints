@@ -30,42 +30,57 @@ circle(r=0.1);
 
 
 union() {
+	translate([-5,8,9])
+	rotate([90,0,90])
+		difference() {
+			cylinder(h = 8, r=4.5, $fn = 100);
+			cylinder(h = 8, r=3.5, $fn = 100);
+
+		}
+
 	// klipsi1
+
 	translate([-4,3,7])
-		union() {
-			intersection() {
-				cube(size = [4, 1, 3]);
-				translate([0,1.6,1.5])
-					rotate([90,0,90])
-						cylinder(h = 4, r=2, $fn = 100);
-			}
-			intersection() {
-				translate([-2,0.5,1.5])
-					rotate([90,0,90])
-						cylinder(h = 2, r=1.8, $fn = 100);
-				rotate([270,0,180])
-				translate([0,-3,-1])
-					prism(3, 2, 2);
-			}
-	}
+#		cube([2,1.5,4]);
+
+	translate([-4,11.5,7])
+#		cube([2,1.5,4]);
+
+//	translate([-4,3,7])
+//		union() {
+//			intersection() {
+//				cube(size = [4, 1, 3]);
+//				translate([0,1.6,1.5])
+//					rotate([90,0,90])
+//						cylinder(h = 4, r=2, $fn = 100);
+//			}
+//			intersection() {
+//				translate([-2,0.5,1.5])
+//					rotate([90,0,90])
+//						cylinder(h = 2, r=1.8, $fn = 100);
+//				rotate([270,0,180])
+//				translate([0,-3,-1])
+//	#				prism(3, 2, 2);
+//			}
+//	}
 
 	// klipsi2
-	translate([-4,12,7])
-		union() {
-			intersection() {
-				cube(size = [4, 1, 3]);
-				translate([0,-0.6,1.5])
-					rotate([90,0,90])
-						cylinder(h = 4, r=2, $fn = 100);
-			}
-			intersection() {
-				translate([-2,0.5,1.5])
-					rotate([90,0,90])
-						cylinder(h = 2, r=1.8, $fn = 100);
-				rotate([90,0,180])
-					prism(3, 2, 2);
-			}
-		}
+//	translate([-4,12,7])
+//		union() {
+//			intersection() {
+//				cube(size = [4, 1, 3]);
+//				translate([0,-0.6,1.5])
+//					rotate([90,0,90])
+//						cylinder(h = 4, r=2, $fn = 100);
+//			}
+//			intersection() {
+//				translate([-2,0.5,1.5])
+//					rotate([90,0,90])
+//						cylinder(h = 2, r=1.8, $fn = 100);
+//				rotate([90,0,180])
+//					prism(3, 2, 2);
+//			}
+//		}
 
 	// kotelon runko
 //	rotate([0,0,90])
@@ -75,15 +90,21 @@ union() {
 	translate([-8,40,-9]) {
 
 		difference() {	
-			roundedRect([16,80,9],8);
+			roundedRect([17,80,9],8);
 
 //			cube(size = [16, 9, 50]);
 			translate([0,2,0])
-				roundedRect([14,80,7],5);
+				roundedRect([13,80,7],6);
 //				cube(size = [14, 7, 50]);
+			translate([-7,-32,4])
+#				cube(size = [14, 80, 3]);
+
+
 			translate([0,-31,5])
 				rotate([0,0,0])
 #					cylinder(h = 5, r=3.5, $fn = 100);
+			translate([-10,24,4])
+#			cube(size=[20,5,3]);
 		}
 	}
 }
