@@ -30,10 +30,10 @@ circle(r=0.1);
 
 
 union() {
-	translate([-5,8,9])
+	translate([-4,8,9])
 	rotate([90,0,90])
 		difference() {
-			cylinder(h = 8, r=4.5, $fn = 100);
+			cylinder(h = 6, r=4.5, $fn = 100);
 			cylinder(h = 8, r=3.5, $fn = 100);
 
 		}
@@ -96,7 +96,7 @@ union() {
 			translate([0,2,0])
 				roundedRect([13,80,7],6);
 //				cube(size = [14, 7, 50]);
-			translate([-7,-32,4])
+			translate([-7,-30,4])
 #				cube(size = [14, 80, 3]);
 
 
