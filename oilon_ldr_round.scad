@@ -46,45 +46,8 @@ union() {
 	translate([-4,11.5,7])
 #		cube([2,1.5,4]);
 
-//	translate([-4,3,7])
-//		union() {
-//			intersection() {
-//				cube(size = [4, 1, 3]);
-//				translate([0,1.6,1.5])
-//					rotate([90,0,90])
-//						cylinder(h = 4, r=2, $fn = 100);
-//			}
-//			intersection() {
-//				translate([-2,0.5,1.5])
-//					rotate([90,0,90])
-//						cylinder(h = 2, r=1.8, $fn = 100);
-//				rotate([270,0,180])
-//				translate([0,-3,-1])
-//	#				prism(3, 2, 2);
-//			}
-//	}
-
-	// klipsi2
-//	translate([-4,12,7])
-//		union() {
-//			intersection() {
-//				cube(size = [4, 1, 3]);
-//				translate([0,-0.6,1.5])
-//					rotate([90,0,90])
-//						cylinder(h = 4, r=2, $fn = 100);
-//			}
-//			intersection() {
-//				translate([-2,0.5,1.5])
-//					rotate([90,0,90])
-//						cylinder(h = 2, r=1.8, $fn = 100);
-//				rotate([90,0,180])
-//					prism(3, 2, 2);
-//			}
-//		}
 
 	// kotelon runko
-//	rotate([0,0,90])
-//	translate([0,-9,0])
 
 	rotate([90,0,270])
 	translate([-8,40,-9]) {
@@ -104,7 +67,14 @@ union() {
 				rotate([0,0,0])
 #					cylinder(h = 5, r=3.5, $fn = 100);
 			translate([-10,24,4])
-#			cube(size=[20,5,3]);
+#				cube(size=[20,5,3]);
+
+			translate([-10,14,2])
+#				cube(size=[20,5,3]);
+
+			translate([-10,-18,2])
+#				cube(size=[20,5,3]);
+
 		}
 	}
 }
